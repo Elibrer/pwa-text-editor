@@ -28,6 +28,11 @@ module.exports = () => {
         title: 'Just another text editor'
       }),
 
+      new InjectManifest({
+        swSrc: './src-sw.js',
+        swDest: 'src-sw.js',
+      }),
+
       // Creates a manifest.json file.
       new WebpackPwaManifest({
         fingerprints: false,
