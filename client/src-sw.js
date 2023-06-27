@@ -35,9 +35,3 @@ registerRoute(
     cacheName: 'static-resources',
   }),
 );
-
-
-
-// offlineFallback(
-//   { urlPattern: /\.(?:html|css|js|json)$/, strategy: pageCache },
-// );
