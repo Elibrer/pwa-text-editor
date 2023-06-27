@@ -4,6 +4,7 @@ const { registerRoute } = require('workbox-routing');
 const { CacheableResponsePlugin } = require('workbox-cacheable-response');
 const { ExpirationPlugin } = require('workbox-expiration');
 const { precacheAndRoute } = require('workbox-precaching/precacheAndRoute');
+const { StaleWhileRevalidate } = require('workbox-strategies');
 
 precacheAndRoute(self.__WB_MANIFEST);
 
@@ -26,6 +27,17 @@ warmStrategyCache({
 
 registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
-offlineFallback(
-  { urlPattern: /\.(?:html|css|js|json)$/, strategy: pageCache },
+//register using staleWhileRevalidate
+registerRoute(
+  ({ request }) => request.destination === 'script' ||
+    request.destination === 'style',
+  new StaleWhileRevalidate({
+    cacheName: 'static-resources',
+  }),
 );
+
+
+
+// offlineFallback(
+//   { urlPattern: /\.(?:html|css|js|json)$/, strategy: pageCache },
+// );
