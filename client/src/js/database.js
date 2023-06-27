@@ -39,8 +39,8 @@ export const getDb = async () => {
 
   if (result.length > 0) {
     const lastEntry = result[result.length - 1];
-    const lastEntryText = lastEntry.text;
-    return lastEntryText;
+   
+    return lastEntry.text;
   } else {
     return null;
   }
