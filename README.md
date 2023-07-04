@@ -15,7 +15,7 @@
 ## Links
 GitHub Repository: [@elibrer](https://github.com/elibrer/pwa-text-editor)
 
-Link to deployed application: [@J.A.T.E](https://zweck-text-editor-8e8af23fd806.herokuapp.com/)
+Link to deployed application: [@J.A.T.E](https://zweck-text-editor-226f3a8f722e.herokuapp.com/)
 
 ---
 
@@ -42,7 +42,7 @@ This application is perfect for users who want to write code or text, both onlin
 ---
 
 ## Installation
-For usage of this application, visit the [J.A.T.E](https://zweck-text-editor-8e8af23fd806.herokuapp.com/) website via heroku. No further installation is required to access and operate the application. 
+For usage of this application, visit the [J.A.T.E](https://zweck-text-editor-226f3a8f722e.herokuapp.com/) website via heroku. No further installation is required to access and operate the application. 
 
 ---
 
